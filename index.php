@@ -2,10 +2,18 @@
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+
+$app = new Slim();
 
 $app->config('debug', true);
 
+require_once("site.php");
+$app->run();
+
+
+
+/*
 $app->get('/', function() {
     
 	$sql = new Hcode\DB\Sql();
@@ -13,7 +21,5 @@ $app->get('/', function() {
 	echo json_encode($results);
 
 });
-
-$app->run();
-
+*/
  ?>
